@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ellen - Portfolio</title>
+    <link rel="icon" href="assets/user.png" type="image/jpeg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">.
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: "#0a0a0a",
+                        light: "#fcfbf7",
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body
+    class="bg-light dark:bg-dark text-dark dark:text-white min-h-screen flex flex-col font-['Inter'] transition-colors duration-300">
+</body>
+<div class="absolute top-8 right-8 z-10">
+    <button id="themeToggle"
+        class="p-2 rounded-lg bg-dark dark:bg-light text-light dark:text-dark w-10 h-10 flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+        </svg>
+    </button>
+</div>
+
+<main class="flex-grow flex flex-col">
+    <!-- Hero Section -->
+    <section class="flex items-center justify-center min-h-screen">
+        <div class="text-center max-w-4xl mx-auto px-4">
+            <h1
+                class="text-4xl md:text-6xl lg:text-7xl font-black mb-2 tracking-tighter leading-none text-shadow-glow-subtle">
+                Ellen <span class="font-garamond font-normal">Cochrane</span> Hart
+            </h1>
+            <p class="text-xl md:text-2xl font-semibold mb-8">
+                <span class="text-gray-600 dark:text-[#C9C9C9]">Software Developer & </span>
+                <span class="bg-gradient-to-r from-[#9C83FF] to-[#FF9051] text-transparent bg-clip-text">Artist</span>
+            </p>
+
+            <!-- Buttons -->
+            <div class="flex justify-center space-x-4 mb-12">
+                <a href="https://github.com/ellenchart" class="button button-filled flex items-center space-x-2">
+                    <span>Github</span>
+                    <i data-lucide="github" class="w-5 h-5"></i>
+                </a>
+                <a href="mailto:ellen.hart@richmond.edu" class="button button-outlined flex items-center space-x-2">
+                    <span>Contact Me</span>
+                    <i data-lucide="mail" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+        <!-- Add the chevron-down icon -->
+        <div class="chevron-down">
+            <i data-lucide="chevron-down" class="w-8 h-8"></i>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="section py-20 bg-gray-100 dark:bg-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-center font-garamond">About Me</h2>
+
+            <!-- Tab Buttons -->
+            <div class="tab-buttons flex justify-center space-x-6 mb-8">
+                <button onclick="openTab('aboutContent')" class="tab-link active-tab">About Me</button>
+                <button onclick="openTab('educationContent')" class="tab-link">Education</button>
+                <button onclick="openTab('interestsContent')" class="tab-link">Interests</button>
+            </div>
+
+            <!-- Tab Content -->
+            <div id="aboutContent" class="tab-content active-tab">
+                <div
+                    class="flex flex-col md:flex-row items-center md:items-start justify-center space-y-8 md:space-y-0 md:space-x-12">
+                    <div class="squircle"></div>
+                    <div class="max-w-2xl text-center md:text-left">
+                        <p class="about-text font-space-mono">
+                            Hi there! 👋 I'm a Software Developer with experience in system enhancement. I’m passionate
+                            about design and coding.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="educationContent" class="tab-content">
+                <h3 class="text-3xl font-bold mb-8 text-center font-garamond">Education</h3>
+                <div class="space-y-6 px-4">
+                    <div class="education-card">
+                        <p class="text-lg text-[#FF9051]">2022 - Present</p>
+                        <h4 class="text-2xl font-bold">Bachelor of Science in Computer Science, Minors in Art and
+                            Mathematics
+                        </h4>
+                        <p class="text-lg">University of Richmond</p>
+                    </div>
+                    <div class="education-card">
+                        <p class="text-lg text-[#FF9051]">2019 - 2022</p>
+                        <h4 class="text-2xl font-bold">Advanced Studies Diploma</h4>
+                        <p class="text-lg">H-B Woodlawn Secondary Program
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="interestsContent" class="tab-content">
+                <div class="grid grid-cols-2 sm:grid-cols-5 gap-y-8 gap-x-4 justify-items-center">
+                    <!-- Individual interest cards -->
+                    <div class="interest-card">
+                        <span class="text-4xl">🎶</span>
+                        <p class="mt-2 font-semibold">Concerts</p>
+                    </div>
+                    <div class="interest-card">
+                        <span class="text-4xl">📚</span>
+                        <p class="mt-2 font-semibold">Reading</p>
+                    </div>
+                    <div class="interest-card">
+                        <span class="text-4xl">🎥</span>
+                        <p class="mt-2 font-semibold">Movies</p>
+                    </div>
+                    <div class="interest-card">
+                        <span class="text-4xl">✈️</span>
+                        <p class="mt-2 font-semibold">Travel</p>
+                    </div>
+                    <div class="interest-card">
+                        <span class="text-4xl">🖼️</span>
+                        <p class="mt-2 font-semibold">Art</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section py-20">
+        <div class="container mx-auto px-8 sm:px-16">
+            <h2 class="text-3xl font-bold mb-12 text-center font-space-mono">What I fiddle with....</h2>
+            <div class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-7 gap-8 justify-items-center">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/c.svg" alt="C" class="tech-icon">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/cplusplus.svg" alt="C++"
+                    class="tech-icon">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/gnubash.svg" alt="GNU Bash"
+                    class="tech-icon">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/linux.svg" alt="Linux" class="tech-icon">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/cmake.svg" alt="CMake" class="tech-icon">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/python.svg" alt="Python"
+                    class="tech-icon">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/langchain.svg" alt="langchain"
+                    class="tech-icon">
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation Links Section -->
+    <section id="links" class="section py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center font-space-mono">Connect with me</h2>
+            <nav class="nav-container">
+                <a href="https://github.com/ellenchart"
+                    class="nav-link text-xl md:text-2xl text-gray-600 dark:text-gray-400 font-bold">
+                    <i data-lucide="github" class="w-6 h-6"></i>
+                    Github
+                </a>
+                <a href="assets/Resume.pdf" target="_blank"
+                    class="nav-link text-xl md:text-2xl text-gray-600 dark:text-gray-400 font-bold">
+                    <i data-lucide="file-text" class="w-6 h-6"></i>
+                    Resume
+                </a>
+                <a href="https://www.linkedin.com/in/ellen-hart/"
+                    class="nav-link text-xl md:text-2xl text-gray-600 dark:text-gray-400 font-bold">
+                    <i data-lucide="linkedin" class="w-6 h-6"></i>
+                    LinkedIn
+                </a>
+                <!-- <a href="https://instagram.com/"
+                    class="nav-link text-xl md:text-2xl text-gray-600 dark:text-gray-400 font-bold">
+                    <i data-lucide="instagram" class="w-6 h-6"></i>
+                    Instagram
+                </a> -->
+                <!-- <a href="https://x.com/"
+                    class="nav-link text-xl md:text-2xl text-gray-600 dark:text-gray-400 font-bold">
+                    <i data-lucide="twitter" class="w-6 h-6"></i>
+                    X/Twitter
+                </a> -->
+                <a href="mailto:akashatworkk@gmail.com"
+                    class="nav-link text-xl md:text-2xl text-gray-600 dark:text-gray-400 font-bold">
+                    <i data-lucide="mail" class="w-6 h-6"></i>
+                    Contact
+                </a>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section py-20 bg-gray-100 dark:bg-gray-900">
+        <div class="container mx-auto px-4 max-w-6xl projects-container">
+            <h2 class="text-3xl font-bold mb-12 text-center font-space-mono">Projects</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project tiles will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+</main>
+<footer class="w-full mt-8 py-4 border-t border-gray-300 dark:border-gray-700">
+    <p class="text-center font-space-mono text-sm uppercase cursor-pointer footer-text" onclick="rickRoll()">
+        CLICK HERE TO GET OUT OF THE MATRIX :]
+    </p>
+</footer>
+<script>
+    tailwind.config = {
+        darkMode: 'class',
+        theme: {
+            extend: {
+                colors: {
+                    dark: "#0a0a0a",
+                    light: "#fcfbf7",
+                },
+            },
+        },
+    }
+</script>
+</head>
+
+<body
+    class="bg-light dark:bg-dark text-dark dark:text-white min-h-screen flex flex-col font-['Inter'] transition-colors duration-300">
+    <script>
+        lucide.createIcons();
+
+        // Scroll reveal effect
+        function revealSections() {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (sectionTop < windowHeight * 0.75) {
+                    section.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealSections);
+        window.addEventListener('load', revealSections);
+
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+
+        // Function to set the theme
+        function setTheme(isDark) {
+            if (isDark) {
+                html.classList.add('dark');
+            } else {
+                html.classList.remove('dark');
+            }
+            updateIcon(isDark);
+            localStorage.setItem('darkMode', isDark);
+        }
+
+        // Function to update the icon
+        function updateIcon(isDark) {
+            themeToggle.innerHTML = isDark
+                ? '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>'
+                : '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>';
+        }
+
+        // Function to get system preference
+        function getSystemPreference() {
+            return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        }
+
+        // Function to set initial theme
+        function setInitialTheme() {
+            const savedTheme = localStorage.getItem('darkMode');
+            if (savedTheme !== null) {
+                setTheme(JSON.parse(savedTheme));
+            } else {
+                setTheme(getSystemPreference());
+            }
+        }
+
+        // Toggle theme when button is clicked
+        themeToggle.addEventListener('click', () => {
+            const isDark = !html.classList.contains('dark');
+            setTheme(isDark);
+        });
+
+        // Listen for system preference changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+            if (localStorage.getItem('darkMode') === null) {
+                setTheme(e.matches);
+            }
+        });
+
+        // Set initial theme
+        setInitialTheme();
+
+        function rickRoll() {
+            window.open("https://www.youtube.com/watch?v=xvFZjo5PgG0", "_blank");
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const rdkElements = document.querySelectorAll('.rdk-hover');
+            rdkElements.forEach(element => {
+                element.addEventListener('click', function () {
+                    if (this.textContent === 'RDK-B') {
+                        window.open('https://wiki.rdkcentral.com/display/RDK/RDK-Broadband', '_blank');
+                    } else if (this.textContent === 'RDK') {
+                        window.open('https://en.wikipedia.org/wiki/Reference_Design_Kit', '_blank');
+                    }
+                });
+            });
+        });
+
+        // Project data
+        const projects = [
+            {
+                title: "deliberate decoding",
+                description: "This project implements HTTP-Live Streaming Protocol server and player in the client device, using gstreamer multimedia framework",
+                url: "https://github.com/ellenchart/deliberateDecoding.github.io",
+                image: "https://opengraph.githubassets.com/1/ellenchart/deliberateDecoding.github.io"
+            },
+            {
+                title: "Developer Portfolio",
+                description: "This is a developer portfolio made using Tailwind framework, JS, HTML, and CSS",
+                url: "https://github.com/ellenchart/ellenchart.github.io",
+                image: "https://opengraph.githubassets.com/1/ellenchart/ellenchart.github.io"
+            }
+        ];
+
+        // Function to create project tiles
+        function createProjectTiles() {
+            const projectsContainer = document.querySelector('#projects .grid');
+            projects.forEach(project => {
+                const tile = document.createElement('div');
+                tile.className = 'project-tile';
+                tile.innerHTML = `
+                    <div class="project-thumbnail mb-4">
+                        <img src="${project.image}" alt="${project.title}" class="w-full h-full object-cover">
+                        <div class="redirect-icon">
+                            <i data-lucide="external-link"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">${project.title}</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">${project.description}</p>
+                    <a href="${project.url}" target="_blank" class="read-more">
+                        find more   
+                        <i data-lucide="github"></i>
+                    </a>
+                    <div class="repo-actions">
+                        <a href="${project.url}/stargazers" target="_blank" class="repo-action">
+                            <i data-lucide="star"></i>
+                            Star
+                        </a>
+                        <a href="${project.url}/fork" target="_blank" class="repo-action">
+                            <i data-lucide="git-fork"></i>
+                            Fork
+                        </a>
+                    </div>
+                `;
+                const thumbnail = tile.querySelector('.project-thumbnail');
+                thumbnail.addEventListener('click', () => window.open(project.url, '_blank'));
+                projectsContainer.appendChild(tile);
+            });
+            lucide.createIcons();
+        }
+
+        // Call the function to create project tiles
+        createProjectTiles();
+
+    </script>
+
+    <!-- Link your JavaScript file right before the closing body tag -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,866 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=EB+Garamond:ital@0;1&family=Space+Mono&display=swap');
+
+.text-shadow-glow-subtle {
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.419);
+}
+
+.font-garamond {
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+}
+
+.nav-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+@media (min-width: 640px) {
+    .nav-container {
+        gap: 2rem;
+    }
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #212427;
+}
+
+.dark .nav-link:hover {
+    color: #ffffff;
+}
+
+.tech-icon {
+    width: 64px;
+    height: 64px;
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.tech-icon {
+    filter: invert(0.4);
+}
+
+.tech-icon:hover {
+    filter: invert(0);
+    transform: scale(1.5);
+}
+
+.dark .tech-icon:hover {
+    filter: invert(1);
+    transform: scale(1.5);
+}
+
+.squircle {
+    width: 256px;
+    height: auto;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (min-width: 740px) {
+    .nav-container {
+        display: grid;
+        grid-template-columns: repeat(6, auto);
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .squircle {
+        width: 260px;
+        height: 260px;
+    }
+}
+
+.font-space-mono {
+    font-family: 'Space Mono', monospace;
+}
+
+.footer-text {
+    transition: letter-spacing 0.8s ease;
+}
+
+.footer-text:hover {
+    letter-spacing: 4px;
+}
+
+.button {
+    font-size: 17px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 980px;
+    transition: all 0.3s ease;
+}
+
+.button-filled {
+    background-color: #ff8c00;
+    color: #212427;
+}
+
+.button-filled:hover {
+    transform: scale(1.15);
+}
+
+.button-outlined {
+    background-color: #007AFF;
+    border: 2px solid #007AFF;
+    color: #FFFFFF;
+}
+
+.button-outlined:hover {
+    transform: scale(1.15);
+}
+
+.chevron-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    40% {
+        transform: translateX(-50%) translateY(-20px);
+    }
+
+    60% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+}
+
+.about-text {
+    font-size: 15px;
+    /* Default size for mobile */
+}
+
+@media (min-width: 768px) {
+    .about-text {
+        font-size: 19px;
+        /* Larger size for desktop */
+    }
+}
+
+.rdk-hover {
+    text-decoration: underline;
+    cursor: pointer;
+    position: relative;
+}
+
+.rdk-hover::after {
+    content: "What is RDK-B?";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #147eff;
+    color: #282232;
+    padding: 4px 8px;
+    border-radius: 7px;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.rdk-hover:hover::after {
+    opacity: 1;
+}
+
+.project-thumbnail {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    aspect-ratio: 2 / 1;
+}
+
+.project-thumbnail:hover {
+    transform: scale(1.05);
+}
+
+.project-thumbnail:hover .redirect-icon {
+    opacity: 1;
+}
+
+.redirect-icon {
+    border-radius: 7px;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.rdk-hover:hover::after {
+    opacity: 1;
+}
+
+.project-thumbnail {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    aspect-ratio: 2 / 1;
+}
+
+.project-thumbnail:hover {
+    transform: scale(1.05);
+}
+
+.project-thumbnail:hover .redirect-icon {
+    opacity: 1;
+}
+
+.redirect-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.redirect-icon svg {
+    color: white;
+    width: 2rem;
+    height: 2rem;
+}
+
+.read-more {
+    font-family: 'Space Mono', monospace;
+    text-transform: uppercase;
+    text-decoration: underline;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 640px) {
+    .projects-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .project-tile {
+        margin-bottom: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+
+    }
+}
+
+.repo-actions {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.repo-action {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.875rem;
+    color: #718096;
+    transition: color 0.3s ease;
+}
+
+.repo-action:hover {
+    color: #2d3748;
+}
+
+.dark .repo-action:hover {
+    color: #e2e8f0;
+}
+
+/* Tab Buttons */
+.tab-buttons button {
+    padding: 10px 20px;
+    border: none;
+    background: transparent;
+    color: #333;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.tab-buttons button:hover {
+    color: #b54769;
+    /* Highlight color */
+}
+
+/* Default Tab Colors */
+.tab-link {
+    color: #333;
+    /* Light mode color */
+}
+
+/* Dark Mode for Tabs */
+.dark .tab-link {
+    color: #ffffff;
+    /* White color in dark mode */
+}
+
+/* Active Tab Underline Color */
+.tab-link.active-tab {
+    border-bottom: 3px solid #b54769;
+    /* Keeps highlight color */
+}
+
+/* Dark Mode Active Tab Underline */
+.dark .tab-link.active-tab {
+    border-bottom: 3px solid #b54769;
+    /* Adjusted highlight color for dark mode */
+}
+
+/* Tab Content */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active-tab {
+    display: block;
+}
+
+/* Interests Section */
+.interest-card {
+    width: 100px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    /* Light mode background */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, background-color 0.3s ease, color 0.3s ease;
+}
+
+.interest-card:hover {
+    transform: scale(1.05);
+}
+
+/* Text within card */
+.interest-card span {
+    font-size: 2rem;
+}
+
+.interest-card p {
+    margin-top: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    /* Light mode text color */
+    text-align: center;
+}
+
+/* Dark Mode for Interest Cards */
+.dark .interest-card {
+    background-color: #333333;
+    /* Darker background for dark mode */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.dark .interest-card p {
+    color: #f1f1f1;
+    /* Lighter text color for dark mode */
+}
+
+/* Education Section */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=EB+Garamond:ital@0;1&family=Space+Mono&display=swap');
+
+.text-shadow-glow-subtle {
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.419);
+}
+
+.font-garamond {
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+}
+
+.nav-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+@media (min-width: 640px) {
+    .nav-container {
+        gap: 2rem;
+    }
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #212427;
+}
+
+.dark .nav-link:hover {
+    color: #ffffff;
+}
+
+.tech-icon {
+    width: 64px;
+    height: 64px;
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.tech-icon {
+    filter: invert(0.4);
+}
+
+.tech-icon:hover {
+    filter: invert(0);
+    transform: scale(1.5);
+}
+
+.dark .tech-icon:hover {
+    filter: invert(1);
+    transform: scale(1.5);
+}
+
+/* image for about me */
+/* Default (Light Mode) */
+.squircle {
+    background-image: url('assets/user-light.png');
+    width: 200px !important;
+    height: 300px !important;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Dark Mode */
+.dark .squircle {
+    background-image: url('assets/user-dark.png');
+}
+
+.section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (min-width: 740px) {
+    .nav-container {
+        display: grid;
+        grid-template-columns: repeat(6, auto);
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .squircle {
+        width: 260px;
+        height: 260px;
+    }
+}
+
+.font-space-mono {
+    font-family: 'Space Mono', monospace;
+}
+
+.footer-text {
+    transition: letter-spacing 0.8s ease;
+}
+
+.footer-text:hover {
+    letter-spacing: 4px;
+}
+
+.button {
+    font-size: 17px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 980px;
+    transition: all 0.3s ease;
+}
+
+.button-filled {
+    background-color: #ff8c00;
+    color: #212427;
+}
+
+.button-filled:hover {
+    transform: scale(1.15);
+}
+
+.button-outlined {
+    background-color: #007AFF;
+    border: 2px solid #007AFF;
+    color: #FFFFFF;
+}
+
+.button-outlined:hover {
+    transform: scale(1.15);
+}
+
+.chevron-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    40% {
+        transform: translateX(-50%) translateY(-20px);
+    }
+
+    60% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+}
+
+.about-text {
+    font-size: 15px;
+    /* Default size for mobile */
+}
+
+@media (min-width: 768px) {
+    .about-text {
+        font-size: 19px;
+        /* Larger size for desktop */
+    }
+}
+
+.rdk-hover {
+    text-decoration: underline;
+    cursor: pointer;
+    position: relative;
+}
+
+.rdk-hover::after {
+    content: "What is RDK-B?";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #147eff;
+    color: #282232;
+    padding: 4px 8px;
+    border-radius: 7px;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.rdk-hover:hover::after {
+    opacity: 1;
+}
+
+.project-thumbnail {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    aspect-ratio: 2 / 1;
+}
+
+.project-thumbnail:hover {
+    transform: scale(1.05);
+}
+
+.project-thumbnail:hover .redirect-icon {
+    opacity: 1;
+}
+
+.redirect-icon {
+    border-radius: 7px;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.rdk-hover:hover::after {
+    opacity: 1;
+}
+
+.project-thumbnail {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    aspect-ratio: 2 / 1;
+}
+
+.project-thumbnail:hover {
+    transform: scale(1.05);
+}
+
+.project-thumbnail:hover .redirect-icon {
+    opacity: 1;
+}
+
+.redirect-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.redirect-icon svg {
+    color: white;
+    width: 2rem;
+    height: 2rem;
+}
+
+.read-more {
+    font-family: 'Space Mono', monospace;
+    text-transform: uppercase;
+    text-decoration: underline;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 640px) {
+    .projects-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .project-tile {
+        margin-bottom: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+
+    }
+}
+
+.repo-actions {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.repo-action {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.875rem;
+    color: #718096;
+    transition: color 0.3s ease;
+}
+
+.repo-action:hover {
+    color: #2d3748;
+}
+
+.dark .repo-action:hover {
+    color: #e2e8f0;
+}
+
+/* Tab Buttons */
+.tab-buttons button {
+    padding: 10px 20px;
+    border: none;
+    background: transparent;
+    color: #333;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.tab-buttons button:hover {
+    color: #b54769;
+    /* Highlight color */
+}
+
+/* Default Tab Colors */
+.tab-link {
+    color: #333;
+    /* Light mode color */
+}
+
+/* Dark Mode for Tabs */
+.dark .tab-link {
+    color: #ffffff;
+    /* White color in dark mode */
+}
+
+/* Active Tab Underline Color */
+.tab-link.active-tab {
+    border-bottom: 3px solid #b54769;
+    /* Keeps highlight color */
+}
+
+/* Dark Mode Active Tab Underline */
+.dark .tab-link.active-tab {
+    border-bottom: 3px solid #b54769;
+    /* Adjusted highlight color for dark mode */
+}
+
+/* Tab Content */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active-tab {
+    display: block;
+}
+
+/* Interests Section */
+.interest-card {
+    width: 100px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    /* Light mode background */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, background-color 0.3s ease, color 0.3s ease;
+}
+
+.interest-card:hover {
+    transform: scale(1.05);
+}
+
+/* Text within card */
+.interest-card span {
+    font-size: 2rem;
+}
+
+.interest-card p {
+    margin-top: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    /* Light mode text color */
+    text-align: center;
+}
+
+/* Dark Mode for Interest Cards */
+.dark .interest-card {
+    background-color: #333333;
+    /* Darker background for dark mode */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.dark .interest-card p {
+    color: #f1f1f1;
+    /* Lighter text color for dark mode */
+}
+
+/* Education Card */
+.education-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, background-color 0.3s ease, color 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.education-card:hover {
+    transform: scale(1.02);
+}
+
+/* Light mode colors */
+.education-card h4 {
+    color: #212427;
+}
+
+.education-card p:first-of-type {
+    color: #b54769;
+    /* Accent color for date */
+}
+
+.education-card p:last-of-type {
+    color: #333;
+    /* Institution name color */
+}
+
+/* Dark Mode for Education Card */
+.dark .education-card {
+    background-color: #333333;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .education-card h4,
+.dark .education-card p {
+    color: #f1f1f1;
+    /* Light text color for dark mode */
+}
+
+.dark .education-card p:first-of-type {
+    color: #b54769;
+    /* Accent color for date in dark mode */
+}
