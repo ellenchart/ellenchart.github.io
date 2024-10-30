@@ -146,17 +146,20 @@
         <div class="container mx-auto px-8 sm:px-16">
             <h2 class="text-3xl font-bold mb-12 text-center font-space-mono">What I fiddle with....</h2>
             <div class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-7 gap-8 justify-items-center">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/c.svg" alt="C" class="tech-icon">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/cplusplus.svg" alt="C++"
-                    class="tech-icon">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/gnubash.svg" alt="GNU Bash"
-                    class="tech-icon">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/linux.svg" alt="Linux" class="tech-icon">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/cmake.svg" alt="CMake" class="tech-icon">
                 <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/python.svg" alt="Python"
                     class="tech-icon">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/langchain.svg" alt="langchain"
+                <!-- <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/c.svg" alt="C" class="tech-icon"> -->
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/cplusplus.svg" alt="C++"
                     class="tech-icon">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/selenium.svg" alt="Selenium"
+                    class="tech-icon">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/github.svg" alt="Git" class="tech-icon">
+                <!-- <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/gnubash.svg" alt="GNU Bash"
+                    class="tech-icon"> -->
+                <!-- <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/linux.svg" alt="Linux" class="tech-icon"> -->
+                <!-- <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/cmake.svg" alt="CMake" class="tech-icon"> -->
+                <!-- <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/langchain.svg" alt="langchain"
+                    class="tech-icon"> -->
             </div>
         </div>
     </section>
@@ -324,7 +327,8 @@
         const projects = [
             {
                 title: "deliberate decoding",
-                description: "This project implements HTTP-Live Streaming Protocol server and player in the client device, using gstreamer multimedia framework",
+                description: `An interactive hyperlink artwork exploring the layered meanings of digital art. 
+                      Published in Issue 22 of <a href="https://www.digitalamerica.org/deliberate-decoding-ellen-hart/" target="_blank" class="underline text-black hover:text-blue-700">Digital America</a>.`,
                 url: "https://github.com/ellenchart/deliberateDecoding.github.io",
                 image: "https://opengraph.githubassets.com/1/ellenchart/deliberateDecoding.github.io"
             },
@@ -333,7 +337,20 @@
                 description: "This is a developer portfolio made using Tailwind framework, JS, HTML, and CSS",
                 url: "https://github.com/ellenchart/ellenchart.github.io",
                 image: "https://opengraph.githubassets.com/1/ellenchart/ellenchart.github.io"
+            },
+            {
+                title: "MIPS Emulator: From Assembly to Operation",
+                description: "Runs MIPS assembly code: includes creating an assembler in C++, developing a Logisim CPU, expanding to support all class instructions, adding I/O, and building a MIPS kernel with syscall handling.",
+                url: "https://github.com/ellenchart/CMSC301_Project",
+                image: "https://opengraph.githubassets.com/1/ellenchart/CMSC301_Project"
+            },
+            {
+                title: "Project Jellen: Favorite Movies API",
+                description: "My friend and I made a C++ REST API dedicated to reviwing our favorite movies. It provides endpoints to access information on selected movies, including genres, directors, and reviews. Each API response offers a personalized look into movies we love, with features like user accounts, orders, and dynamic content fetched from JSON files.",
+                url: "https://github.com/cmsc240-s24/project-jellen",
+                image: "https://opengraph.githubassets.com/1/cmsc240-s24/project-jellen"
             }
+
         ];
 
         // Function to create project tiles
