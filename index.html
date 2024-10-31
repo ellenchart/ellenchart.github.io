@@ -9,6 +9,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css">.
+    <link rel="stylesheet" href="https://unpkg.com/github-calendar/dist/github-calendar-responsive.css" />
+    <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -77,6 +79,7 @@
             <div class="tab-buttons flex justify-center space-x-6 mb-8">
                 <button onclick="openTab('aboutContent')" class="tab-link active-tab">About Me</button>
                 <button onclick="openTab('educationContent')" class="tab-link">Education</button>
+                <button onclick="openTab('careerContent')" class="tab-link">Career</button>
                 <button onclick="openTab('interestsContent')" class="tab-link">Interests</button>
             </div>
 
@@ -194,7 +197,7 @@
                     <i data-lucide="twitter" class="w-6 h-6"></i>
                     X/Twitter
                 </a> -->
-                <a href="mailto:akashatworkk@gmail.com"
+                <a href="mailto:ellen.hart@richmond.edu"
                     class="nav-link text-xl md:text-2xl text-gray-600 dark:text-gray-400 font-bold">
                     <i data-lucide="mail" class="w-6 h-6"></i>
                     Contact
@@ -212,6 +215,15 @@
             </div>
         </div>
     </section>
+
+    <!-- GitHub Calendar Section -->
+    <section id="github-calendar-section" class="py-20 bg-gray-100 dark:bg-gray-900">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2 class="text-3xl font-bold mb-12 text-center font-space-mono">My GitHub Calendar</h2>
+            <div id="github-calendar" class="my-10"></div>
+        </div>
+    </section>
+
 
 </main>
 <footer class="w-full mt-8 py-4 border-t border-gray-300 dark:border-gray-700">
@@ -398,6 +410,9 @@
     <!-- Link your JavaScript file right before the closing body tag -->
     <script src="script.js"></script>
 
+    <script>
+        GitHubCalendar("#github-calendar", "ellenchart", { responsive: true });
+    </script>
 </body>
 
 </html>

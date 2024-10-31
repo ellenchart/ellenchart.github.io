@@ -11,3 +11,5 @@ function openTab(tabId) {
     document.getElementById(tabId).classList.add('active-tab');
     event.currentTarget.classList.add('active-tab');
 }
+
+
