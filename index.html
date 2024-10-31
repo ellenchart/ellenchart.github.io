@@ -116,6 +116,95 @@
                 </div>
             </div>
 
+            <section id="careerContent" class="tab-content hidden">
+                <div class="relative mx-auto max-w-4xl">
+                    <!-- Timeline Line -->
+                    <div class="absolute left-1/2 transform -translate-x-1/2 h-full border-l-4 border-blue-500"></div>
+
+                    <!-- Left Side Timeline Item -->
+                    <div class="mb-8 flex items-center justify-between w-full">
+                        <div class="w-5/12"></div>
+                        <div
+                            class="w-5/12 bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg relative transform -translate-y-4">
+                            <div
+                                class="absolute -left-3 top-3 bg-blue-500 rounded-full w-6 h-6 text-white flex items-center justify-center">
+                                <button onclick="toggleDetails('job1')" class="focus:outline-none">+</button>
+                            </div>
+                            <h3 class="text-xl font-semibold text-blue-600 dark:text-blue-400">Research Assistant</h3>
+                            <p class="text-gray-500 dark:text-gray-400">University of Richmond</p>
+                            <span
+                                class="text-xs bg-blue-200 text-blue-700 dark:bg-blue-600 dark:text-white rounded-full px-3 py-1 inline-block mt-2">Aug
+                                2023 - Present</span>
+                            <div id="details-job1" class="hidden mt-4 text-gray-600 dark:text-gray-400">
+                                <p>Conducted research and reviewed articles for academic thesis development.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Side Timeline Item -->
+                    <div class="mb-8 flex items-center justify-between w-full">
+                        <div
+                            class="w-5/12 bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg relative transform -translate-y-4">
+                            <div
+                                class="absolute -right-3 top-3 bg-blue-500 rounded-full w-6 h-6 text-white flex items-center justify-center">
+                                <button onclick="toggleDetails('job2')" class="focus:outline-none">+</button>
+                            </div>
+                            <h3 class="text-xl font-semibold text-blue-600 dark:text-blue-400">Teaching Assistant</h3>
+                            <p class="text-gray-500 dark:text-gray-400">University of Richmond</p>
+                            <span
+                                class="text-xs bg-blue-200 text-blue-700 dark:bg-blue-600 dark:text-white rounded-full px-3 py-1 inline-block mt-2">Sept
+                                2023 - Present</span>
+                            <div id="details-job2" class="hidden mt-4 text-gray-600 dark:text-gray-400">
+                                <p>Assisted in lab sessions and provided feedback to students.</p>
+                            </div>
+                        </div>
+                        <div class="w-5/12"></div>
+                    </div>
+
+                    <!-- Left Side Timeline Item -->
+                    <div class="mb-8 flex items-center justify-between w-full">
+                        <div class="w-5/12"></div>
+                        <div
+                            class="w-5/12 bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg relative transform -translate-y-4">
+                            <div
+                                class="absolute -left-3 top-3 bg-blue-500 rounded-full w-6 h-6 text-white flex items-center justify-center">
+                                <button onclick="toggleDetails('job3')" class="focus:outline-none">+</button>
+                            </div>
+                            <h3 class="text-xl font-semibold text-blue-600 dark:text-blue-400">Web Development Intern
+                            </h3>
+                            <p class="text-gray-500 dark:text-gray-400">Aadhar Medical and Educational Trust</p>
+                            <span
+                                class="text-xs bg-blue-200 text-blue-700 dark:bg-blue-600 dark:text-white rounded-full px-3 py-1 inline-block mt-2">Sep
+                                2022 - Oct 2022</span>
+                            <div id="details-job3" class="hidden mt-4 text-gray-600 dark:text-gray-400">
+                                <p>Worked on developing user-friendly web interfaces for healthcare applications.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Side Timeline Item -->
+                    <div class="mb-8 flex items-center justify-between w-full">
+                        <div
+                            class="w-5/12 bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg relative transform -translate-y-4">
+                            <div
+                                class="absolute -right-3 top-3 bg-blue-500 rounded-full w-6 h-6 text-white flex items-center justify-center">
+                                <button onclick="toggleDetails('job4')" class="focus:outline-none">+</button>
+                            </div>
+                            <h3 class="text-xl font-semibold text-blue-600 dark:text-blue-400">Software Engineer</h3>
+                            <p class="text-gray-500 dark:text-gray-400">Zeus Learning</p>
+                            <span
+                                class="text-xs bg-blue-200 text-blue-700 dark:bg-blue-600 dark:text-white rounded-full px-3 py-1 inline-block mt-2">Jun
+                                2024 - Present</span>
+                            <div id="details-job4" class="hidden mt-4 text-gray-600 dark:text-gray-400">
+                                <p>Contributed to various software development projects and system improvements.</p>
+                            </div>
+                        </div>
+                        <div class="w-5/12"></div>
+                    </div>
+                </div>
+            </section>
+
+
             <div id="interestsContent" class="tab-content">
                 <div class="grid grid-cols-2 sm:grid-cols-5 gap-y-8 gap-x-4 justify-items-center">
                     <!-- Individual interest cards -->
@@ -413,6 +502,22 @@
     <script>
         GitHubCalendar("#github-calendar", "ellenchart", { responsive: true });
     </script>
+
+    <script>
+        function toggleDetails(jobId) {
+            const details = document.getElementById(`details-${jobId}`);
+            const button = details.previousElementSibling.querySelector("button");
+
+            if (details.classList.contains("hidden")) {
+                details.classList.remove("hidden");
+                button.textContent = "-";
+            } else {
+                details.classList.add("hidden");
+                button.textContent = "+";
+            }
+        }
+    </script>
+
 </body>
 
 </html>

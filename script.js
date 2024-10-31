@@ -12,4 +12,17 @@ function openTab(tabId) {
     event.currentTarget.classList.add('active-tab');
 }
 
+function toggleDetails(jobId) {
+    const details = document.getElementById(`details-${jobId}`);
+    const button = details.previousElementSibling.querySelector("button");
+
+    if (details.classList.contains("hidden")) {
+        details.classList.remove("hidden");
+        button.textContent = "-";
+    } else {
+        details.classList.add("hidden");
+        button.textContent = "+";
+    }
+}
+
 
