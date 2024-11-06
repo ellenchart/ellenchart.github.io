@@ -864,3 +864,14 @@
     color: #b54769;
     /* Accent color for date in dark mode */
 }
+
+/* Add the following at the end of your CSS file */
+.section-title {
+    margin-top: 4rem;
+    /* Adjust this value as needed */
+}
+
+#projects h2 {
+    margin-top: 1rem;
+    /* Increases space between header and 'Projects' title */
+}

@@ -8,7 +8,7 @@
     <link rel="icon" href="assets/user.png" type="image/jpeg">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="style.css">.
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/github-calendar/dist/github-calendar-responsive.css" />
     <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
     <script>
@@ -24,506 +24,569 @@
             },
         }
     </script>
+    <style>
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Header background and shadow for both light and dark modes */
+        header {
+            background-color: #fcfbf7;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .dark header {
+            background-color: #0a0a0a;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Font style for header title to match main title */
+        .header-title {
+            font-weight: bold;
+            font-size: 1.5rem;
+            line-height: 1;
+            letter-spacing: -0.5px;
+        }
+
+        .header-title .font-garamond {
+            font-family: "Garamond", serif;
+            font-weight: normal;
+        }
+
+        /* Center align text and button vertically */
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    </style>
 </head>
 
-<body
+<body id="top"
     class="bg-light dark:bg-dark text-dark dark:text-white min-h-screen flex flex-col font-['Inter'] transition-colors duration-300">
-</body>
-<div class="absolute top-8 right-8 z-10">
-    <button id="themeToggle"
-        class="p-2 rounded-lg bg-dark dark:bg-light text-light dark:text-dark w-10 h-10 flex items-center justify-center">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-        </svg>
-    </button>
-</div>
 
-<main class="flex-grow flex flex-col">
-    <!-- Hero Section -->
-    <section class="flex items-center justify-center min-h-screen">
-        <div class="text-center max-w-4xl mx-auto px-4">
-            <h1
-                class="text-4xl md:text-6xl lg:text-7xl font-black mb-2 tracking-tighter leading-none text-shadow-glow-subtle">
+    <!-- Header with Navigation Links and Dark/Light Toggle -->
+    <header class="fixed top-0 w-full z-50">
+        <div class="container mx-auto header-container py-4 px-8">
+            <a href="#top" class="header-title text-gray-900 dark:text-white">
                 Ellen <span class="font-garamond font-normal">Cochrane</span> Hart
-            </h1>
-            <p class="text-xl md:text-2xl font-semibold mb-8">
-                <span class="text-gray-600 dark:text-[#C9C9C9]">Software Developer & </span>
-                <span class="bg-gradient-to-r from-[#9C83FF] to-[#FF9051] text-transparent bg-clip-text">Artist</span>
-            </p>
-
-            <!-- Buttons -->
-            <div class="flex justify-center space-x-4 mb-12">
-                <a href="https://github.com/ellenchart" class="button button-filled flex items-center space-x-2">
-                    <span>Github</span>
-                    <i data-lucide="github" class="w-5 h-5"></i>
-                </a>
-                <a href="mailto:ellen.hart@richmond.edu" class="button button-outlined flex items-center space-x-2">
-                    <span>Contact Me</span>
-                    <i data-lucide="mail" class="w-5 h-5"></i>
-                </a>
-            </div>
+            </a>
+            <nav class="flex items-center space-x-4">
+                <a href="#about"
+                    class="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">About</a>
+                <a href="#projects"
+                    class="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400">Projects</a>
+                <button id="themeToggle"
+                    class="p-2 rounded-lg bg-dark dark:bg-light text-light dark:text-dark w-10 h-10 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+            </nav>
         </div>
-        <!-- Add the chevron-down icon -->
-        <div class="chevron-down">
-            <i data-lucide="chevron-down" class="w-8 h-8"></i>
-        </div>
-    </section>
+    </header>
 
-    <!-- About Me Section -->
-    <section id="about" class="section py-20 bg-gray-100 dark:bg-gray-900">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold mb-8 text-center font-garamond">About Me</h2>
+    <main class="flex-grow flex flex-col">
+        <!-- Hero Section -->
+        <section class="flex items-center justify-center min-h-screen">
+            <div class="text-center max-w-4xl mx-auto px-4">
+                <h1
+                    class="text-4xl md:text-6xl lg:text-7xl font-black mb-2 tracking-tighter leading-none text-shadow-glow-subtle">
+                    Ellen <span class="font-garamond font-normal">Cochrane</span> Hart
+                </h1>
+                <p class="text-xl md:text-2xl font-semibold mb-8">
+                    <span class="text-gray-600 dark:text-[#C9C9C9]">Software Developer & </span>
+                    <span
+                        class="bg-gradient-to-r from-[#9C83FF] to-[#FF9051] text-transparent bg-clip-text">Artist</span>
+                </p>
 
-            <!-- Tab Buttons -->
-            <div class="tab-buttons flex justify-center space-x-6 mb-8">
-                <button onclick="openTab('aboutContent')" class="tab-link active-tab">About Me</button>
-                <button onclick="openTab('educationContent')" class="tab-link">Education</button>
-                <button onclick="openTab('careerContent')" class="tab-link">Career</button>
-                <button onclick="openTab('interestsContent')" class="tab-link">Interests</button>
-            </div>
-
-            <!-- Tab Content -->
-            <div id="aboutContent" class="tab-content active-tab">
-                <div
-                    class="flex flex-col md:flex-row items-center md:items-start justify-center space-y-8 md:space-y-0 md:space-x-12">
-                    <div class="squircle"></div>
-                    <div class="max-w-2xl text-center md:text-left">
-                        <p class="about-text font-space-mono">
-                            Hi there! 👋 I'm a Software Developer with experience in system enhancement. I’m passionate
-                            about design and coding.
-                        </p>
-                    </div>
+                <!-- Buttons -->
+                <div class="flex justify-center space-x-4 mb-12">
+                    <a href="https://github.com/ellenchart" class="button button-filled flex items-center space-x-2">
+                        <span>Github</span>
+                        <i data-lucide="github" class="w-5 h-5"></i>
+                    </a>
+                    <a href="mailto:ellen.hart@richmond.edu" class="button button-outlined flex items-center space-x-2">
+                        <span>Contact Me</span>
+                        <i data-lucide="mail" class="w-5 h-5"></i>
+                    </a>
                 </div>
             </div>
-
-            <div id="educationContent" class="tab-content">
-                <h3 class="text-3xl font-bold mb-8 text-center font-garamond">Education</h3>
-                <div class="space-y-6 px-4">
-                    <div class="education-card">
-                        <p class="text-lg text-[#FF9051]">2022 - Present</p>
-                        <h4 class="text-2xl font-bold">Bachelor of Science in Computer Science, Minors in Art and
-                            Mathematics
-                        </h4>
-                        <p class="text-lg">University of Richmond</p>
-                    </div>
-                    <div class="education-card">
-                        <p class="text-lg text-[#FF9051]">2019 - 2022</p>
-                        <h4 class="text-2xl font-bold">Advanced Studies Diploma</h4>
-                        <p class="text-lg">H-B Woodlawn Secondary Program
-                        </p>
-                    </div>
-                </div>
+            <!-- Add the chevron-down icon -->
+            <div class="chevron-down">
+                <i data-lucide="chevron-down" class="w-8 h-8"></i>
             </div>
+        </section>
 
-            <section id="careerContent" class="tab-content hidden">
-                <div class="relative mx-auto max-w-4xl">
-                    <!-- Timeline Line -->
-                    <div class="absolute left-1/2 transform -translate-x-1/2 h-full border-l-4 border-blue-500"></div>
+        <!-- About Me Section -->
+        <section id="about" class="section py-20 pt-24 bg-gray-100 dark:bg-gray-900">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold mb-8 text-center font-garamond">About Me</h2>
 
-                    <!-- Left Side Timeline Item -->
-                    <div class="mb-8 flex items-center justify-between w-full">
-                        <div class="w-5/12"></div>
-                        <div
-                            class="w-5/12 bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg relative transform -translate-y-4">
-                            <div
-                                class="absolute -left-3 top-3 bg-blue-500 rounded-full w-6 h-6 text-white flex items-center justify-center">
-                                <button onclick="toggleDetails('job1')" class="focus:outline-none">+</button>
-                            </div>
-                            <h3 class="text-xl font-semibold text-blue-600 dark:text-blue-400">Research Assistant</h3>
-                            <p class="text-gray-500 dark:text-gray-400">University of Richmond</p>
-                            <span
-                                class="text-xs bg-blue-200 text-blue-700 dark:bg-blue-600 dark:text-white rounded-full px-3 py-1 inline-block mt-2">Aug
-                                2023 - Present</span>
-                            <div id="details-job1" class="hidden mt-4 text-gray-600 dark:text-gray-400">
-                                <p>- Assist in creating a robust thesis statement by reviewing over 40 articles in the
-                                    fields of computing and education. <br>
-                                    - Refine goals for African computer science education through discussions,
-                                    identifying three impactful strategies. <br>
-                                    - Review 25+ CHI (Conference on Human Factors in Computing Systems) articles'
-                                    adherence to accessibility rules.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Tab Buttons -->
+                <div class="tab-buttons flex justify-center space-x-6 mb-8">
+                    <button onclick="openTab('aboutContent')" class="tab-link active-tab">About Me</button>
+                    <button onclick="openTab('educationContent')" class="tab-link">Education</button>
+                    <button onclick="openTab('careerContent')" class="tab-link">Career</button>
+                    <button onclick="openTab('interestsContent')" class="tab-link">Interests</button>
+                </div>
 
-                    <!-- Right Side Timeline Item -->
-                    <div class="mb-8 flex items-center justify-between w-full">
-                    </div>
-
-                    <!-- Right Side Timeline Item -->
-                    <div class="mb-8 flex items-center justify-between w-full">
-                        <div
-                            class="w-5/12 bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg relative transform -translate-y-4">
-                            <div
-                                class="absolute -right-3 top-3 bg-blue-500 rounded-full w-6 h-6 text-white flex items-center justify-center">
-                                <button onclick="toggleDetails('job2')" class="focus:outline-none">+</button>
-                            </div>
-                            <h3 class="text-xl font-semibold text-blue-600 dark:text-blue-400">Teaching Assistant</h3>
-                            <p class="text-gray-500 dark:text-gray-400">University of Richmond</p>
-                            <span
-                                class="text-xs bg-blue-200 text-blue-700 dark:bg-blue-600 dark:text-white rounded-full px-3 py-1 inline-block mt-2">Sept
-                                2023 - Present</span>
-                            <div id="details-job2" class="hidden mt-4 text-gray-600 dark:text-gray-400">
-                                <p>- Supported project-based learning by mentoring students during Friday lab sessions,
-                                    assisting in the development, debugging, and documentation of 25 semester-long
-                                    Python projects, and ensuring compliance with best practices such as PEP8. <br>
-                                    - Provided online assistance to 15+ students, answering queries and offering
-                                    guidance on Python programming challenges to enhance their learning experience and
-                                    project outcomes. <br>
-                                    - Guided students through programming exercises to reinforce Python fundamentals and
-                                    resolved individual queries on key topics, including control structures, arrays,
-                                    recursion, and file I/O.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="w-5/12"></div>
-                    </div>
-
-                    <!-- Left Side Timeline Item -->
-                    <div class="mb-8 flex items-center justify-between w-full">
-                        <div class="w-5/12"></div>
-                        <div
-                            class="w-5/12 bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg relative transform -translate-y-4">
-                            <div
-                                class="absolute -left-3 top-3 bg-blue-500 rounded-full w-6 h-6 text-white flex items-center justify-center">
-                                <button onclick="toggleDetails('job3')" class="focus:outline-none">+</button>
-                            </div>
-                            <h3 class="text-xl font-semibold text-blue-600 dark:text-blue-400">Software Engineer Intern
-                            </h3>
-                            <p class="text-gray-500 dark:text-gray-400">Genesys</p>
-                            <span
-                                class="text-xs bg-blue-200 text-blue-700 dark:bg-blue-600 dark:text-white rounded-full px-3 py-1 inline-block mt-2">May
-                                2024 - Aug 2024</span>
-                            <div id="details-job3" class="hidden mt-4 text-gray-600 dark:text-gray-400">
-                                <p>- Implements automated testing procedures for the front end, optimizing testing
-                                    efficiency and accuracy. <br>
-                                    - Conducts thorough bug detection, contributing to the enhancement of product
-                                    reliability and performance.<br>
-                                    - Focuses on improving accessibility standards and ensuring overall product quality,
-                                    enhancing user experience.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Right Side Timeline Item -->
-                    <div class="mb-8 flex items-center justify-between w-full">
-                        <div
-                            class="w-5/12 bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg relative transform -translate-y-4">
-                            <div
-                                class="absolute -right-3 top-3 bg-blue-500 rounded-full w-6 h-6 text-white flex items-center justify-center">
-                                <button onclick="toggleDetails('job4')" class="focus:outline-none">+</button>
-                            </div>
-                            <h3 class="text-xl font-semibold text-blue-600 dark:text-blue-400">Software Engineer Intern
-                            </h3>
-                            <p class="text-gray-500 dark:text-gray-400">Relai
+                <!-- Tab Content -->
+                <div id="aboutContent" class="tab-content active-tab">
+                    <div
+                        class="flex flex-col md:flex-row items-center md:items-start justify-center space-y-8 md:space-y-0 md:space-x-12">
+                        <div class="squircle"></div>
+                        <div class="max-w-2xl text-center md:text-left">
+                            <p class="about-text font-space-mono">
+                                Hi there! 👋 I'm a Software Developer with experience in system enhancement. I’m
+                                passionate
+                                about design and coding.
                             </p>
-                            <span
-                                class="text-xs bg-blue-200 text-blue-700 dark:bg-blue-600 dark:text-white rounded-full px-3 py-1 inline-block mt-2">June
-                                2023 - Aug 2023</span>
-                            <div id="details-job4" class="hidden mt-4 text-gray-600 dark:text-gray-400">
-                                <p>- Conducted UX research for template designs, and contacted 600 businesses for
-                                    user-focused wireframes. <br>
-                                    - Developed a full-stack software architecture using JS, HTML, Node.js, and React
-                                    for their new mobile app.<br>
-                                    - Enhanced app functionality by integrating multiple APIs, resulting in a 25%
-                                    increase in user engagement.
-                                </p>
-                            </div>
                         </div>
-                        <div class="w-5/12"></div>
                     </div>
+                </div>
 
-                    <!-- Left Side Timeline Item -->
-                    <div class="mb-8 flex items-center justify-between w-full">
-                        <div class="w-5/12"></div>
-                        <div
-                            class="w-5/12 bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg relative transform -translate-y-4">
+                <div id="educationContent" class="tab-content">
+                    <h3 class="text-3xl font-bold mb-8 text-center font-garamond">Education</h3>
+                    <div class="space-y-6 px-4">
+                        <div class="education-card bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg">
+                            <p class="text-lg text-[#FF9051]">2022 - Present</p>
+                            <h4 class="text-2xl font-bold text-gray-900 dark:text-white">Bachelor of Science in Computer
+                                Science, Minors in Art and Mathematics</h4>
+                            <p class="text-lg text-gray-600 dark:text-gray-400">University of Richmond</p>
+                        </div>
+                        <div class="education-card bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg">
+                            <p class="text-lg text-[#FF9051]">2019 - 2022</p>
+                            <h4 class="text-2xl font-bold text-gray-900 dark:text-white">Advanced Studies Diploma</h4>
+                            <p class="text-lg text-gray-600 dark:text-gray-400">H-B Woodlawn Secondary Program</p>
+                        </div>
+                    </div>
+                </div>
+
+                <section id="careerContent" class="tab-content hidden">
+                    <div class="relative mx-auto max-w-4xl">
+                        <!-- Timeline Line -->
+                        <div class="absolute left-1/2 transform -translate-x-1/2 h-full border-l-4 border-blue-500">
+                        </div>
+
+                        <!-- Left Side Timeline Item -->
+                        <div class="mb-8 flex items-center justify-between w-full">
+                            <div class="w-5/12"></div>
                             <div
-                                class="absolute -left-3 top-3 bg-blue-500 rounded-full w-6 h-6 text-white flex items-center justify-center">
-                                <button onclick="toggleDetails('job5')" class="focus:outline-none">+</button>
-                            </div>
-                            <h3 class="text-xl font-semibold text-blue-600 dark:text-blue-400">Group Planner and Dock
-                                Hand
-                            </h3>
-                            <p class="text-gray-500 dark:text-gray-400">Guest Services, Inc. </p>
-                            <span
-                                class="text-xs bg-blue-200 text-blue-700 dark:bg-blue-600 dark:text-white rounded-full px-3 py-1 inline-block mt-2">May
-                                2024 - Aug 2024</span>
-                            <div id="details-job5" class="hidden mt-4 text-gray-600 dark:text-gray-400">
-                                <p>- Arranged multiple large group events at Boating in DC's various locations with over
-                                    100 people. <br>
-                                    - Maintained daily and effective communication with clients, ensuring customers'
-                                    needs are met.<br>
-                                    - Led group tours of up to 30+ people on kayaks and delivered educational facts
-                                    about Washington, DC.
-
-                                </p>
+                                class="w-5/12 bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg relative transform -translate-y-4">
+                                <div
+                                    class="absolute -left-3 top-3 bg-blue-500 rounded-full w-6 h-6 text-white flex items-center justify-center">
+                                    <button onclick="toggleDetails('job1')" class="focus:outline-none">+</button>
+                                </div>
+                                <h3 class="text-xl font-semibold text-blue-600 dark:text-blue-400">Research Assistant
+                                </h3>
+                                <p class="text-gray-500 dark:text-gray-400">University of Richmond</p>
+                                <span
+                                    class="text-xs bg-blue-200 text-blue-700 dark:bg-blue-600 dark:text-white rounded-full px-3 py-1 inline-block mt-2">Aug
+                                    2023 - Present</span>
+                                <div id="details-job1" class="hidden mt-4 text-gray-600 dark:text-gray-400">
+                                    <p>- Assist in creating a robust thesis statement by reviewing over 40 articles in
+                                        the
+                                        fields of computing and education. <br>
+                                        - Refine goals for African computer science education through discussions,
+                                        identifying three impactful strategies. <br>
+                                        - Review 25+ CHI (Conference on Human Factors in Computing Systems) articles'
+                                        adherence to accessibility rules.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
+                        <!-- Right Side Timeline Item -->
+                        <div class="mb-8 flex items-center justify-between w-full">
+                        </div>
+
+                        <!-- Right Side Timeline Item -->
+                        <div class="mb-8 flex items-center justify-between w-full">
+                            <div
+                                class="w-5/12 bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg relative transform -translate-y-4">
+                                <div
+                                    class="absolute -right-3 top-3 bg-blue-500 rounded-full w-6 h-6 text-white flex items-center justify-center">
+                                    <button onclick="toggleDetails('job2')" class="focus:outline-none">+</button>
+                                </div>
+                                <h3 class="text-xl font-semibold text-blue-600 dark:text-blue-400">Teaching Assistant
+                                </h3>
+                                <p class="text-gray-500 dark:text-gray-400">University of Richmond</p>
+                                <span
+                                    class="text-xs bg-blue-200 text-blue-700 dark:bg-blue-600 dark:text-white rounded-full px-3 py-1 inline-block mt-2">Sept
+                                    2023 - Present</span>
+                                <div id="details-job2" class="hidden mt-4 text-gray-600 dark:text-gray-400">
+                                    <p>- Supported project-based learning by mentoring students during Friday lab
+                                        sessions,
+                                        assisting in the development, debugging, and documentation of 25 semester-long
+                                        Python projects, and ensuring compliance with best practices such as PEP8. <br>
+                                        - Provided online assistance to 15+ students, answering queries and offering
+                                        guidance on Python programming challenges to enhance their learning experience
+                                        and
+                                        project outcomes. <br>
+                                        - Guided students through programming exercises to reinforce Python fundamentals
+                                        and
+                                        resolved individual queries on key topics, including control structures, arrays,
+                                        recursion, and file I/O.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="w-5/12"></div>
+                        </div>
+
+                        <!-- Left Side Timeline Item -->
+                        <div class="mb-8 flex items-center justify-between w-full">
+                            <div class="w-5/12"></div>
+                            <div
+                                class="w-5/12 bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg relative transform -translate-y-4">
+                                <div
+                                    class="absolute -left-3 top-3 bg-blue-500 rounded-full w-6 h-6 text-white flex items-center justify-center">
+                                    <button onclick="toggleDetails('job3')" class="focus:outline-none">+</button>
+                                </div>
+                                <h3 class="text-xl font-semibold text-blue-600 dark:text-blue-400">Software Engineer
+                                    Intern
+                                </h3>
+                                <p class="text-gray-500 dark:text-gray-400">Genesys</p>
+                                <span
+                                    class="text-xs bg-blue-200 text-blue-700 dark:bg-blue-600 dark:text-white rounded-full px-3 py-1 inline-block mt-2">May
+                                    2024 - Aug 2024</span>
+                                <div id="details-job3" class="hidden mt-4 text-gray-600 dark:text-gray-400">
+                                    <p>- Implements automated testing procedures for the front end, optimizing testing
+                                        efficiency and accuracy. <br>
+                                        - Conducts thorough bug detection, contributing to the enhancement of product
+                                        reliability and performance.<br>
+                                        - Focuses on improving accessibility standards and ensuring overall product
+                                        quality,
+                                        enhancing user experience.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Side Timeline Item -->
+                        <div class="mb-8 flex items-center justify-between w-full">
+                            <div
+                                class="w-5/12 bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg relative transform -translate-y-4">
+                                <div
+                                    class="absolute -right-3 top-3 bg-blue-500 rounded-full w-6 h-6 text-white flex items-center justify-center">
+                                    <button onclick="toggleDetails('job4')" class="focus:outline-none">+</button>
+                                </div>
+                                <h3 class="text-xl font-semibold text-blue-600 dark:text-blue-400">Software Engineer
+                                    Intern
+                                </h3>
+                                <p class="text-gray-500 dark:text-gray-400">Relai
+                                </p>
+                                <span
+                                    class="text-xs bg-blue-200 text-blue-700 dark:bg-blue-600 dark:text-white rounded-full px-3 py-1 inline-block mt-2">June
+                                    2023 - Aug 2023</span>
+                                <div id="details-job4" class="hidden mt-4 text-gray-600 dark:text-gray-400">
+                                    <p>- Conducted UX research for template designs, and contacted 600 businesses for
+                                        user-focused wireframes. <br>
+                                        - Developed a full-stack software architecture using JS, HTML, Node.js, and
+                                        React
+                                        for their new mobile app.<br>
+                                        - Enhanced app functionality by integrating multiple APIs, resulting in a 25%
+                                        increase in user engagement.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="w-5/12"></div>
+                        </div>
+
+                        <!-- Left Side Timeline Item -->
+                        <div class="mb-8 flex items-center justify-between w-full">
+                            <div class="w-5/12"></div>
+                            <div
+                                class="w-5/12 bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg relative transform -translate-y-4">
+                                <div
+                                    class="absolute -left-3 top-3 bg-blue-500 rounded-full w-6 h-6 text-white flex items-center justify-center">
+                                    <button onclick="toggleDetails('job5')" class="focus:outline-none">+</button>
+                                </div>
+                                <h3 class="text-xl font-semibold text-blue-600 dark:text-blue-400">Group Planner and
+                                    Dock
+                                    Hand
+                                </h3>
+                                <p class="text-gray-500 dark:text-gray-400">Guest Services, Inc. </p>
+                                <span
+                                    class="text-xs bg-blue-200 text-blue-700 dark:bg-blue-600 dark:text-white rounded-full px-3 py-1 inline-block mt-2">May
+                                    2024 - Aug 2024</span>
+                                <div id="details-job5" class="hidden mt-4 text-gray-600 dark:text-gray-400">
+                                    <p>- Arranged multiple large group events at Boating in DC's various locations with
+                                        over
+                                        100 people. <br>
+                                        - Maintained daily and effective communication with clients, ensuring customers'
+                                        needs are met.<br>
+                                        - Led group tours of up to 30+ people on kayaks and delivered educational facts
+                                        about Washington, DC.
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+
+                <div id="interestsContent" class="tab-content">
+                    <div class="grid grid-cols-2 sm:grid-cols-5 gap-y-8 gap-x-4 justify-items-center">
+                        <div class="interest-card bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg text-center">
+                            <span class="text-4xl">🎶</span>
+                            <p class="mt-2 font-semibold text-gray-900 dark:text-white">Concerts</p>
+                        </div>
+                        <div class="interest-card bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg text-center">
+                            <span class="text-4xl">📚</span>
+                            <p class="mt-2 font-semibold text-gray-900 dark:text-white">Reading</p>
+                        </div>
+                        <div class="interest-card bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg text-center">
+                            <span class="text-4xl">🎥</span>
+                            <p class="mt-2 font-semibold text-gray-900 dark:text-white">Movies</p>
+                        </div>
+                        <div class="interest-card bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg text-center">
+                            <span class="text-4xl">✈️</span>
+                            <p class="mt-2 font-semibold text-gray-900 dark:text-white">Travel</p>
+                        </div>
+                        <div class="interest-card bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg text-center">
+                            <span class="text-4xl">🖼️</span>
+                            <p class="mt-2 font-semibold text-gray-900 dark:text-white">Art</p>
+                        </div>
+                    </div>
                 </div>
-            </section>
+        </section>
 
-
-            <div id="interestsContent" class="tab-content">
-                <div class="grid grid-cols-2 sm:grid-cols-5 gap-y-8 gap-x-4 justify-items-center">
-                    <!-- Individual interest cards -->
-                    <div class="interest-card">
-                        <span class="text-4xl">🎶</span>
-                        <p class="mt-2 font-semibold">Concerts</p>
-                    </div>
-                    <div class="interest-card">
-                        <span class="text-4xl">📚</span>
-                        <p class="mt-2 font-semibold">Reading</p>
-                    </div>
-                    <div class="interest-card">
-                        <span class="text-4xl">🎥</span>
-                        <p class="mt-2 font-semibold">Movies</p>
-                    </div>
-                    <div class="interest-card">
-                        <span class="text-4xl">✈️</span>
-                        <p class="mt-2 font-semibold">Travel</p>
-                    </div>
-                    <div class="interest-card">
-                        <span class="text-4xl">🖼️</span>
-                        <p class="mt-2 font-semibold">Art</p>
-                    </div>
+        <!-- Skills Section -->
+        <section id="skills" class="section py-20">
+            <div class="container mx-auto px-8 sm:px-16">
+                <h2 class="text-3xl font-bold mb-12 text-center font-space-mono">What I fiddle with....</h2>
+                <div class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-7 gap-8 justify-items-center">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/python.svg" alt="Python"
+                        class="tech-icon">
+                    <!-- <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/c.svg" alt="C" class="tech-icon"> -->
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/cplusplus.svg" alt="C++"
+                        class="tech-icon">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/selenium.svg" alt="Selenium"
+                        class="tech-icon">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/github.svg" alt="Git"
+                        class="tech-icon">
+                    <!-- <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/gnubash.svg" alt="GNU Bash"
+                    class="tech-icon"> -->
+                    <!-- <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/linux.svg" alt="Linux" class="tech-icon"> -->
+                    <!-- <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/cmake.svg" alt="CMake" class="tech-icon"> -->
+                    <!-- <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/langchain.svg" alt="langchain"
+                    class="tech-icon"> -->
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section py-20">
-        <div class="container mx-auto px-8 sm:px-16">
-            <h2 class="text-3xl font-bold mb-12 text-center font-space-mono">What I fiddle with....</h2>
-            <div class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-7 gap-8 justify-items-center">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/python.svg" alt="Python"
-                    class="tech-icon">
-                <!-- <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/c.svg" alt="C" class="tech-icon"> -->
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/cplusplus.svg" alt="C++"
-                    class="tech-icon">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/selenium.svg" alt="Selenium"
-                    class="tech-icon">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/github.svg" alt="Git" class="tech-icon">
-                <!-- <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/gnubash.svg" alt="GNU Bash"
-                    class="tech-icon"> -->
-                <!-- <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/linux.svg" alt="Linux" class="tech-icon"> -->
-                <!-- <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/cmake.svg" alt="CMake" class="tech-icon"> -->
-                <!-- <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/langchain.svg" alt="langchain"
-                    class="tech-icon"> -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Navigation Links Section -->
-    <section id="links" class="section py-20">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold mb-12 text-center font-space-mono">Connect with me</h2>
-            <nav class="nav-container">
-                <a href="https://github.com/ellenchart"
-                    class="nav-link text-xl md:text-2xl text-gray-600 dark:text-gray-400 font-bold">
-                    <i data-lucide="github" class="w-6 h-6"></i>
-                    Github
-                </a>
-                <a href="assets/Resume.pdf" target="_blank"
-                    class="nav-link text-xl md:text-2xl text-gray-600 dark:text-gray-400 font-bold">
-                    <i data-lucide="file-text" class="w-6 h-6"></i>
-                    Resume
-                </a>
-                <a href="https://www.linkedin.com/in/ellen-hart/"
-                    class="nav-link text-xl md:text-2xl text-gray-600 dark:text-gray-400 font-bold">
-                    <i data-lucide="linkedin" class="w-6 h-6"></i>
-                    LinkedIn
-                </a>
-                <!-- <a href="https://instagram.com/"
+        <!-- Navigation Links Section -->
+        <section id="links" class="section py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold mb-12 text-center font-space-mono">Connect with me</h2>
+                <nav class="nav-container">
+                    <a href="https://github.com/ellenchart"
+                        class="nav-link text-xl md:text-2xl text-gray-600 dark:text-gray-400 font-bold">
+                        <i data-lucide="github" class="w-6 h-6"></i>
+                        Github
+                    </a>
+                    <a href="assets/Resume.pdf" target="_blank"
+                        class="nav-link text-xl md:text-2xl text-gray-600 dark:text-gray-400 font-bold">
+                        <i data-lucide="file-text" class="w-6 h-6"></i>
+                        Resume
+                    </a>
+                    <a href="https://www.linkedin.com/in/ellen-hart/"
+                        class="nav-link text-xl md:text-2xl text-gray-600 dark:text-gray-400 font-bold">
+                        <i data-lucide="linkedin" class="w-6 h-6"></i>
+                        LinkedIn
+                    </a>
+                    <!-- <a href="https://instagram.com/"
                     class="nav-link text-xl md:text-2xl text-gray-600 dark:text-gray-400 font-bold">
                     <i data-lucide="instagram" class="w-6 h-6"></i>
                     Instagram
                 </a> -->
-                <!-- <a href="https://x.com/"
+                    <!-- <a href="https://x.com/"
                     class="nav-link text-xl md:text-2xl text-gray-600 dark:text-gray-400 font-bold">
                     <i data-lucide="twitter" class="w-6 h-6"></i>
                     X/Twitter
                 </a> -->
-                <a href="mailto:ellen.hart@richmond.edu"
-                    class="nav-link text-xl md:text-2xl text-gray-600 dark:text-gray-400 font-bold">
-                    <i data-lucide="mail" class="w-6 h-6"></i>
-                    Contact
-                </a>
-            </nav>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section py-20 bg-gray-100 dark:bg-gray-900">
-        <div class="container mx-auto px-4 max-w-6xl projects-container">
-            <h2 class="text-3xl font-bold mb-12 text-center font-space-mono">Projects</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project tiles will be dynamically inserted here -->
+                    <a href="mailto:ellen.hart@richmond.edu"
+                        class="nav-link text-xl md:text-2xl text-gray-600 dark:text-gray-400 font-bold">
+                        <i data-lucide="mail" class="w-6 h-6"></i>
+                        Contact
+                    </a>
+                </nav>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- GitHub Calendar Section -->
-    <section id="github-calendar-section" class="py-20 bg-gray-100 dark:bg-gray-900">
-        <div class="container mx-auto px-4 max-w-6xl">
-            <h2 class="text-3xl font-bold mb-12 text-center font-space-mono">My GitHub Calendar</h2>
-            <div id="github-calendar" class="my-10"></div>
-        </div>
-    </section>
+        <!-- Projects Section -->
+        <section id="projects" class="section py-20 bg-gray-100 dark:bg-gray-900">
+            <div class="container mx-auto px-4 max-w-6xl projects-container">
+                <h2 class="text-3xl font-bold mb-12 text-center font-space-mono section-title">Projects</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project tiles will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- GitHub Calendar Section -->
+        <section id="github-calendar-section" class="py-20 bg-gray-100 dark:bg-gray-900">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <h2 class="text-3xl font-bold mb-12 text-center font-space-mono">My GitHub Calendar</h2>
+                <div id="github-calendar" class="my-10"></div>
+            </div>
+        </section>
 
 
-</main>
-<footer class="w-full mt-8 py-4 border-t border-gray-300 dark:border-gray-700">
-    <p class="text-center font-space-mono text-sm uppercase cursor-pointer footer-text" onclick="rickRoll()">
-        CLICK HERE TO GET OUT OF THE MATRIX :]
-    </p>
-</footer>
-<script>
-    tailwind.config = {
-        darkMode: 'class',
-        theme: {
-            extend: {
-                colors: {
-                    dark: "#0a0a0a",
-                    light: "#fcfbf7",
+    </main>
+    <footer class="w-full mt-8 py-4 border-t border-gray-300 dark:border-gray-700">
+        <p class="text-center font-space-mono text-sm uppercase cursor-pointer footer-text" onclick="rickRoll()">
+            CLICK HERE TO GET OUT OF THE MATRIX :]
+        </p>
+    </footer>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: "#0a0a0a",
+                        light: "#fcfbf7",
+                    },
                 },
             },
-        },
-    }
-</script>
-</head>
-
-<body
-    class="bg-light dark:bg-dark text-dark dark:text-white min-h-screen flex flex-col font-['Inter'] transition-colors duration-300">
-    <script>
-        lucide.createIcons();
-
-        // Scroll reveal effect
-        function revealSections() {
-            const sections = document.querySelectorAll('.section');
-            sections.forEach(section => {
-                const sectionTop = section.getBoundingClientRect().top;
-                const windowHeight = window.innerHeight;
-                if (sectionTop < windowHeight * 0.75) {
-                    section.classList.add('visible');
-                }
-            });
         }
+    </script>
+    </head>
 
-        window.addEventListener('scroll', revealSections);
-        window.addEventListener('load', revealSections);
+    <body
+        class="bg-light dark:bg-dark text-dark dark:text-white min-h-screen flex flex-col font-['Inter'] transition-colors duration-300">
+        <script>
+            lucide.createIcons();
 
-        const themeToggle = document.getElementById('themeToggle');
-        const html = document.documentElement;
-
-        // Function to set the theme
-        function setTheme(isDark) {
-            if (isDark) {
-                html.classList.add('dark');
-            } else {
-                html.classList.remove('dark');
-            }
-            updateIcon(isDark);
-            localStorage.setItem('darkMode', isDark);
-        }
-
-        // Function to update the icon
-        function updateIcon(isDark) {
-            themeToggle.innerHTML = isDark
-                ? '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>'
-                : '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>';
-        }
-
-        // Function to get system preference
-        function getSystemPreference() {
-            return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-        }
-
-        // Function to set initial theme
-        function setInitialTheme() {
-            const savedTheme = localStorage.getItem('darkMode');
-            if (savedTheme !== null) {
-                setTheme(JSON.parse(savedTheme));
-            } else {
-                setTheme(getSystemPreference());
-            }
-        }
-
-        // Toggle theme when button is clicked
-        themeToggle.addEventListener('click', () => {
-            const isDark = !html.classList.contains('dark');
-            setTheme(isDark);
-        });
-
-        // Listen for system preference changes
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-            if (localStorage.getItem('darkMode') === null) {
-                setTheme(e.matches);
-            }
-        });
-
-        // Set initial theme
-        setInitialTheme();
-
-        function rickRoll() {
-            window.open("https://www.youtube.com/watch?v=xvFZjo5PgG0", "_blank");
-        }
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const rdkElements = document.querySelectorAll('.rdk-hover');
-            rdkElements.forEach(element => {
-                element.addEventListener('click', function () {
-                    if (this.textContent === 'RDK-B') {
-                        window.open('https://wiki.rdkcentral.com/display/RDK/RDK-Broadband', '_blank');
-                    } else if (this.textContent === 'RDK') {
-                        window.open('https://en.wikipedia.org/wiki/Reference_Design_Kit', '_blank');
+            // Scroll reveal effect
+            function revealSections() {
+                const sections = document.querySelectorAll('.section');
+                sections.forEach(section => {
+                    const sectionTop = section.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    if (sectionTop < windowHeight * 0.75) {
+                        section.classList.add('visible');
                     }
                 });
-            });
-        });
-
-        // Project data
-        const projects = [
-            {
-                title: "deliberate decoding",
-                description: `An interactive hyperlink artwork exploring the layered meanings of digital art. 
-                      Published in Issue 22 of <a href="https://www.digitalamerica.org/deliberate-decoding-ellen-hart/" target="_blank" class="underline text-black hover:text-blue-700">Digital America</a>.`,
-                url: "https://github.com/ellenchart/deliberateDecoding.github.io",
-                image: "https://opengraph.githubassets.com/1/ellenchart/deliberateDecoding.github.io"
-            },
-            {
-                title: "Developer Portfolio",
-                description: "This is a developer portfolio made using Tailwind framework, JS, HTML, and CSS",
-                url: "https://github.com/ellenchart/ellenchart.github.io",
-                image: "https://opengraph.githubassets.com/1/ellenchart/ellenchart.github.io"
-            },
-            {
-                title: "MIPS Emulator: From Assembly to Operation",
-                description: "Runs MIPS assembly code: includes creating an assembler in C++, developing a Logisim CPU, expanding to support all class instructions, adding I/O, and building a MIPS kernel with syscall handling.",
-                url: "https://github.com/ellenchart/CMSC301_Project",
-                image: "https://opengraph.githubassets.com/1/ellenchart/CMSC301_Project"
-            },
-            {
-                title: "Project Jellen: Favorite Movies API",
-                description: "My friend and I made a C++ REST API dedicated to reviwing our favorite movies. It provides endpoints to access information on selected movies, including genres, directors, and reviews. Each API response offers a personalized look into movies we love, with features like user accounts, orders, and dynamic content fetched from JSON files.",
-                url: "https://github.com/cmsc240-s24/project-jellen",
-                image: "https://opengraph.githubassets.com/1/cmsc240-s24/project-jellen"
             }
 
-        ];
+            window.addEventListener('scroll', revealSections);
+            window.addEventListener('load', revealSections);
 
-        // Function to create project tiles
-        function createProjectTiles() {
-            const projectsContainer = document.querySelector('#projects .grid');
-            projects.forEach(project => {
-                const tile = document.createElement('div');
-                tile.className = 'project-tile';
-                tile.innerHTML = `
+            const themeToggle = document.getElementById('themeToggle');
+            const html = document.documentElement;
+
+            // Function to set the theme
+            function setTheme(isDark) {
+                if (isDark) {
+                    html.classList.add('dark');
+                } else {
+                    html.classList.remove('dark');
+                }
+                updateIcon(isDark);
+                localStorage.setItem('darkMode', isDark);
+            }
+
+            // Function to update the icon
+            function updateIcon(isDark) {
+                themeToggle.innerHTML = isDark
+                    ? '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>'
+                    : '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>';
+            }
+
+            // Function to get system preference
+            function getSystemPreference() {
+                return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            }
+
+            // Function to set initial theme
+            function setInitialTheme() {
+                const savedTheme = localStorage.getItem('darkMode');
+                if (savedTheme !== null) {
+                    setTheme(JSON.parse(savedTheme));
+                } else {
+                    setTheme(getSystemPreference());
+                }
+            }
+
+            // Toggle theme when button is clicked
+            themeToggle.addEventListener('click', () => {
+                const isDark = !html.classList.contains('dark');
+                setTheme(isDark);
+            });
+
+            // Listen for system preference changes
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+                if (localStorage.getItem('darkMode') === null) {
+                    setTheme(e.matches);
+                }
+            });
+
+            // Set initial theme
+            setInitialTheme();
+
+            function rickRoll() {
+                window.open("https://www.youtube.com/watch?v=xvFZjo5PgG0", "_blank");
+            }
+
+            document.addEventListener('DOMContentLoaded', function () {
+                const rdkElements = document.querySelectorAll('.rdk-hover');
+                rdkElements.forEach(element => {
+                    element.addEventListener('click', function () {
+                        if (this.textContent === 'RDK-B') {
+                            window.open('https://wiki.rdkcentral.com/display/RDK/RDK-Broadband', '_blank');
+                        } else if (this.textContent === 'RDK') {
+                            window.open('https://en.wikipedia.org/wiki/Reference_Design_Kit', '_blank');
+                        }
+                    });
+                });
+            });
+
+            // Project data
+            const projects = [
+                {
+                    title: "deliberate decoding",
+                    description: `An interactive hyperlink artwork exploring the layered meanings of digital art. 
+                      Published in Issue 22 of <a href="https://www.digitalamerica.org/deliberate-decoding-ellen-hart/" target="_blank" class="underline text-black hover:text-blue-700">Digital America</a>.`,
+                    url: "https://github.com/ellenchart/deliberateDecoding.github.io",
+                    image: "https://opengraph.githubassets.com/1/ellenchart/deliberateDecoding.github.io"
+                },
+                {
+                    title: "Developer Portfolio",
+                    description: "This is a developer portfolio made using Tailwind framework, JS, HTML, and CSS",
+                    url: "https://github.com/ellenchart/ellenchart.github.io",
+                    image: "https://opengraph.githubassets.com/1/ellenchart/ellenchart.github.io"
+                },
+                {
+                    title: "MIPS Emulator: From Assembly to Operation",
+                    description: "Runs MIPS assembly code: includes creating an assembler in C++, developing a Logisim CPU, expanding to support all class instructions, adding I/O, and building a MIPS kernel with syscall handling.",
+                    url: "https://github.com/ellenchart/CMSC301_Project",
+                    image: "https://opengraph.githubassets.com/1/ellenchart/CMSC301_Project"
+                },
+                {
+                    title: "Project Jellen: Favorite Movies API",
+                    description: "My friend and I made a C++ REST API dedicated to reviwing our favorite movies. It provides endpoints to access information on selected movies, including genres, directors, and reviews. Each API response offers a personalized look into movies we love, with features like user accounts, orders, and dynamic content fetched from JSON files.",
+                    url: "https://github.com/cmsc240-s24/project-jellen",
+                    image: "https://opengraph.githubassets.com/1/cmsc240-s24/project-jellen"
+                }
+
+            ];
+
+            // Function to create project tiles
+            function createProjectTiles() {
+                const projectsContainer = document.querySelector('#projects .grid');
+                projects.forEach(project => {
+                    const tile = document.createElement('div');
+                    tile.className = 'project-tile';
+                    tile.innerHTML = `
                     <div class="project-thumbnail mb-4">
                         <img src="${project.image}" alt="${project.title}" class="w-full h-full object-cover">
                         <div class="redirect-icon">
@@ -547,40 +610,40 @@
                         </a>
                     </div>
                 `;
-                const thumbnail = tile.querySelector('.project-thumbnail');
-                thumbnail.addEventListener('click', () => window.open(project.url, '_blank'));
-                projectsContainer.appendChild(tile);
-            });
-            lucide.createIcons();
-        }
-
-        // Call the function to create project tiles
-        createProjectTiles();
-
-    </script>
-
-    <!-- Link your JavaScript file right before the closing body tag -->
-    <script src="script.js"></script>
-
-    <script>
-        GitHubCalendar("#github-calendar", "ellenchart", { responsive: true });
-    </script>
-
-    <script>
-        function toggleDetails(jobId) {
-            const details = document.getElementById(`details-${jobId}`);
-            const button = details.previousElementSibling.querySelector("button");
-
-            if (details.classList.contains("hidden")) {
-                details.classList.remove("hidden");
-                button.textContent = "-";
-            } else {
-                details.classList.add("hidden");
-                button.textContent = "+";
+                    const thumbnail = tile.querySelector('.project-thumbnail');
+                    thumbnail.addEventListener('click', () => window.open(project.url, '_blank'));
+                    projectsContainer.appendChild(tile);
+                });
+                lucide.createIcons();
             }
-        }
-    </script>
 
-</body>
+            // Call the function to create project tiles
+            createProjectTiles();
+
+        </script>
+
+        <!-- Link your JavaScript file right before the closing body tag -->
+        <script src="script.js"></script>
+
+        <script>
+            GitHubCalendar("#github-calendar", "ellenchart", { responsive: true });
+        </script>
+
+        <script>
+            function toggleDetails(jobId) {
+                const details = document.getElementById(`details-${jobId}`);
+                const button = details.previousElementSibling.querySelector("button");
+
+                if (details.classList.contains("hidden")) {
+                    details.classList.remove("hidden");
+                    button.textContent = "-";
+                } else {
+                    details.classList.add("hidden");
+                    button.textContent = "+";
+                }
+            }
+        </script>
+
+    </body>
 
 </html>
