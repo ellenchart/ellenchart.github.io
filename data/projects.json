@@ -3,25 +3,25 @@
         "title": "deliberate decoding",
         "description": "An interactive hyperlink artwork exploring the layered meanings of digital art. Published in Issue 22 of <a href=\"https://www.digitalamerica.org/deliberate-decoding-ellen-hart/\" target=\"_blank\" class=\"underline text-black hover:text-blue-700\">Digital America</a>.",
         "url": "https://github.com/ellenchart/deliberateDecoding.github.io",
-        "image": "https://opengraph.githubassets.com/1/ellenchart/deliberateDecoding.github.io"
+        "image": "assets/projects/deliberate-decoding.png"
     },
     {
         "title": "Developer Portfolio",
         "description": "This is a developer portfolio made using Tailwind framework, JS, HTML, and CSS",
         "url": "https://github.com/ellenchart/ellenchart.github.io",
-        "image": "https://opengraph.githubassets.com/1/ellenchart/ellenchart.github.io"
+        "image": "assets/projects/developer-portfolio.png"
     },
     {
         "title": "MIPS Emulator: From Assembly to Operation",
         "description": "Runs MIPS assembly code: includes creating an assembler in C++, developing a Logisim CPU, expanding to support all class instructions, adding I/O, and building a MIPS kernel with syscall handling.",
         "url": "https://github.com/ellenchart/CMSC301_Project",
-        "image": "https://opengraph.githubassets.com/1/ellenchart/CMSC301_Project"
+        "image": "assets/projects/mips-emulator.png"
     },
     {
         "title": "Project Jellen: Favorite Movies API",
         "description": "My friend and I made a C++ REST API dedicated to reviwing our favorite movies. It provides endpoints to access information on selected movies, including genres, directors, and reviews. Each API response offers a personalized look into movies we love, with features like user accounts, orders, and dynamic content fetched from JSON files.",
         "url": "https://github.com/cmsc240-s24/project-jellen",
-        "image": "https://opengraph.githubassets.com/1/cmsc240-s24/project-jellen"
+        "image": "assets/projects/project-jellen.png"
     }
 ]
 [

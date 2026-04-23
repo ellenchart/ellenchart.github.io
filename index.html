@@ -5,15 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ellen - Portfolio</title>
-    <link rel="icon" href="assets/user.png" type="image/jpeg">
+    <link rel="icon" href="assets/user-light.png" type="image/png">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="preconnect" href="https://opengraph.githubassets.com">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script defer src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="https://unpkg.com/github-calendar/dist/github-calendar-responsive.css" />
-    <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -139,166 +140,11 @@
                 </div>
 
                 <section id="careerContent" class="tab-content hidden">
+                    <h3 class="text-3xl font-bold mb-8 text-center font-garamond">Career</h3>
                     <div class="relative mx-auto max-w-4xl">
-                        <!-- Timeline Line -->
                         <div class="absolute left-1/2 transform -translate-x-1/2 h-full border-l-4 border-blue-500">
                         </div>
-
-                        <!-- Left Side Timeline Item -->
-                        <div class="mb-8 flex items-center justify-between w-full">
-                            <div class="w-5/12"></div>
-                            <div
-                                class="w-5/12 bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg relative transform -translate-y-4">
-                                <div
-                                    class="absolute -left-3 top-3 bg-blue-500 rounded-full w-6 h-6 text-white flex items-center justify-center">
-                                    <button onclick="toggleDetails('job1')" class="focus:outline-none">+</button>
-                                </div>
-                                <h3 class="text-xl font-semibold text-blue-600 dark:text-blue-400">Research Assistant
-                                </h3>
-                                <p class="text-gray-500 dark:text-gray-400">University of Richmond</p>
-                                <span
-                                    class="text-xs bg-blue-200 text-blue-700 dark:bg-blue-600 dark:text-white rounded-full px-3 py-1 inline-block mt-2">Aug
-                                    2023 - Present</span>
-                                <div id="details-job1" class="hidden mt-4 text-gray-600 dark:text-gray-400">
-                                    <p>- Assist in creating a robust thesis statement by reviewing over 40 articles in
-                                        the
-                                        fields of computing and education. <br>
-                                        - Refine goals for African computer science education through discussions,
-                                        identifying three impactful strategies. <br>
-                                        - Review 25+ CHI (Conference on Human Factors in Computing Systems) articles'
-                                        adherence to accessibility rules.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Right Side Timeline Item -->
-                        <div class="mb-8 flex items-center justify-between w-full">
-                        </div>
-
-                        <!-- Right Side Timeline Item -->
-                        <div class="mb-8 flex items-center justify-between w-full">
-                            <div
-                                class="w-5/12 bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg relative transform -translate-y-4">
-                                <div
-                                    class="absolute -right-3 top-3 bg-blue-500 rounded-full w-6 h-6 text-white flex items-center justify-center">
-                                    <button onclick="toggleDetails('job2')" class="focus:outline-none">+</button>
-                                </div>
-                                <h3 class="text-xl font-semibold text-blue-600 dark:text-blue-400">Teaching Assistant
-                                </h3>
-                                <p class="text-gray-500 dark:text-gray-400">University of Richmond</p>
-                                <span
-                                    class="text-xs bg-blue-200 text-blue-700 dark:bg-blue-600 dark:text-white rounded-full px-3 py-1 inline-block mt-2">Sept
-                                    2023 - Present</span>
-                                <div id="details-job2" class="hidden mt-4 text-gray-600 dark:text-gray-400">
-                                    <p>- Supported project-based learning by mentoring students during Friday lab
-                                        sessions,
-                                        assisting in the development, debugging, and documentation of 25 semester-long
-                                        Python projects, and ensuring compliance with best practices such as PEP8. <br>
-                                        - Provided online assistance to 15+ students, answering queries and offering
-                                        guidance on Python programming challenges to enhance their learning experience
-                                        and
-                                        project outcomes. <br>
-                                        - Guided students through programming exercises to reinforce Python fundamentals
-                                        and
-                                        resolved individual queries on key topics, including control structures, arrays,
-                                        recursion, and file I/O.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="w-5/12"></div>
-                        </div>
-
-                        <!-- Left Side Timeline Item -->
-                        <div class="mb-8 flex items-center justify-between w-full">
-                            <div class="w-5/12"></div>
-                            <div
-                                class="w-5/12 bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg relative transform -translate-y-4">
-                                <div
-                                    class="absolute -left-3 top-3 bg-blue-500 rounded-full w-6 h-6 text-white flex items-center justify-center">
-                                    <button onclick="toggleDetails('job3')" class="focus:outline-none">+</button>
-                                </div>
-                                <h3 class="text-xl font-semibold text-blue-600 dark:text-blue-400">Software Engineer
-                                    Intern
-                                </h3>
-                                <p class="text-gray-500 dark:text-gray-400">Genesys</p>
-                                <span
-                                    class="text-xs bg-blue-200 text-blue-700 dark:bg-blue-600 dark:text-white rounded-full px-3 py-1 inline-block mt-2">May
-                                    2024 - Aug 2024</span>
-                                <div id="details-job3" class="hidden mt-4 text-gray-600 dark:text-gray-400">
-                                    <p>- Implements automated testing procedures for the front end, optimizing testing
-                                        efficiency and accuracy. <br>
-                                        - Conducts thorough bug detection, contributing to the enhancement of product
-                                        reliability and performance.<br>
-                                        - Focuses on improving accessibility standards and ensuring overall product
-                                        quality,
-                                        enhancing user experience.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Right Side Timeline Item -->
-                        <div class="mb-8 flex items-center justify-between w-full">
-                            <div
-                                class="w-5/12 bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg relative transform -translate-y-4">
-                                <div
-                                    class="absolute -right-3 top-3 bg-blue-500 rounded-full w-6 h-6 text-white flex items-center justify-center">
-                                    <button onclick="toggleDetails('job4')" class="focus:outline-none">+</button>
-                                </div>
-                                <h3 class="text-xl font-semibold text-blue-600 dark:text-blue-400">Software Engineer
-                                    Intern
-                                </h3>
-                                <p class="text-gray-500 dark:text-gray-400">Relai
-                                </p>
-                                <span
-                                    class="text-xs bg-blue-200 text-blue-700 dark:bg-blue-600 dark:text-white rounded-full px-3 py-1 inline-block mt-2">June
-                                    2023 - Aug 2023</span>
-                                <div id="details-job4" class="hidden mt-4 text-gray-600 dark:text-gray-400">
-                                    <p>- Conducted UX research for template designs, and contacted 600 businesses for
-                                        user-focused wireframes. <br>
-                                        - Developed a full-stack software architecture using JS, HTML, Node.js, and
-                                        React
-                                        for their new mobile app.<br>
-                                        - Enhanced app functionality by integrating multiple APIs, resulting in a 25%
-                                        increase in user engagement.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="w-5/12"></div>
-                        </div>
-
-                        <!-- Left Side Timeline Item -->
-                        <div class="mb-8 flex items-center justify-between w-full">
-                            <div class="w-5/12"></div>
-                            <div
-                                class="w-5/12 bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg relative transform -translate-y-4">
-                                <div
-                                    class="absolute -left-3 top-3 bg-blue-500 rounded-full w-6 h-6 text-white flex items-center justify-center">
-                                    <button onclick="toggleDetails('job5')" class="focus:outline-none">+</button>
-                                </div>
-                                <h3 class="text-xl font-semibold text-blue-600 dark:text-blue-400">Group Planner and
-                                    Dock
-                                    Hand
-                                </h3>
-                                <p class="text-gray-500 dark:text-gray-400">Guest Services, Inc. </p>
-                                <span
-                                    class="text-xs bg-blue-200 text-blue-700 dark:bg-blue-600 dark:text-white rounded-full px-3 py-1 inline-block mt-2">May
-                                    2024 - Aug 2024</span>
-                                <div id="details-job5" class="hidden mt-4 text-gray-600 dark:text-gray-400">
-                                    <p>- Arranged multiple large group events at Boating in DC's various locations with
-                                        over
-                                        100 people. <br>
-                                        - Maintained daily and effective communication with clients, ensuring customers'
-                                        needs are met.<br>
-                                        - Led group tours of up to 30+ people on kayaks and delivered educational facts
-                                        about Washington, DC.
-
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
+                        <div id="careerTimeline" class="relative"></div>
                     </div>
                 </section>
 
@@ -427,13 +273,14 @@
             </div>
         </section>
 
-        <!-- GitHub Calendar Section -->
+        <!-- GitHub Calendar Section
         <section id="github-calendar-section" class="py-20 bg-gray-100 dark:bg-gray-900">
             <div class="container mx-auto px-4 max-w-6xl">
                 <h2 class="text-3xl font-bold mb-12 text-center font-space-mono">My GitHub Calendar</h2>
                 <div id="github-calendar" class="my-10"></div>
             </div>
         </section>
+        -->
 
 
     </main>

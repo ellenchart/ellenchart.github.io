@@ -1,0 +1,62 @@
+[
+    {
+        "id": "job1",
+        "side": "left",
+        "title": "Research Assistant",
+        "organization": "University of Richmond",
+        "date": "Aug 2023 - Present",
+        "details": [
+            "Assist in creating a robust thesis statement by reviewing over 40 articles in the fields of computing and education.",
+            "Refine goals for African computer science education through discussions, identifying three impactful strategies.",
+            "Review 25+ CHI (Conference on Human Factors in Computing Systems) articles for adherence to accessibility rules."
+        ]
+    },
+    {
+        "id": "job2",
+        "side": "right",
+        "title": "Teaching Assistant",
+        "organization": "University of Richmond",
+        "date": "Sept 2023 - Present",
+        "details": [
+            "Supported project-based learning by mentoring students during Friday lab sessions, assisting in development, debugging, and documentation of semester-long Python projects.",
+            "Provided online assistance to students, answering queries and offering guidance on Python programming challenges.",
+            "Guided students through programming exercises on control structures, arrays, recursion, and file I/O."
+        ]
+    },
+    {
+        "id": "job3",
+        "side": "left",
+        "title": "Software Engineer Intern",
+        "organization": "Genesys",
+        "date": "May 2024 - Aug 2024",
+        "details": [
+            "Implemented automated front-end testing procedures to improve testing efficiency and accuracy.",
+            "Conducted thorough bug detection to improve product reliability and performance.",
+            "Focused on improving accessibility standards and overall product quality."
+        ]
+    },
+    {
+        "id": "job4",
+        "side": "right",
+        "title": "Software Engineer Intern",
+        "organization": "Relai",
+        "date": "June 2023 - Aug 2023",
+        "details": [
+            "Conducted UX research for template designs and contacted 600 businesses for user-focused wireframes.",
+            "Developed full-stack software architecture using JavaScript, HTML, Node.js, and React for a mobile app.",
+            "Enhanced app functionality by integrating multiple APIs, resulting in increased user engagement."
+        ]
+    },
+    {
+        "id": "job5",
+        "side": "left",
+        "title": "Group Planner and Dock Hand",
+        "organization": "Guest Services, Inc.",
+        "date": "May 2024 - Aug 2024",
+        "details": [
+            "Arranged large group events at Boating in DC locations with over 100 participants.",
+            "Maintained daily communication with clients to ensure needs were met.",
+            "Led group tours and delivered educational facts about Washington, DC."
+        ]
+    }
+]
